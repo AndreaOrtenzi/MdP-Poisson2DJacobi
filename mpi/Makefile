@@ -6,7 +6,7 @@ LDFLAGS = -lm
 all: jacobiMPI
 
 jacobiMPI: mainMPI.c
-	$(CC) $(CFLAGS) $(LDFLAGS) mainMPI.c solver_transposed_mpi.c solver_transposed_mpi_avx.c -o jacobiMPI
+	$(CC) $(CFLAGS) mainMPI.c solver_transposed_mpi.c solver_transposed_mpi_avx.c -o jacobiMPI $(LDFLAGS)
 
 clean:
 	rm -f jacobiMPI *.o
