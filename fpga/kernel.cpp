@@ -2,10 +2,10 @@
 #include "math.h"
 
 #ifndef NX
-#define NX 16
+#define NX 64
 #endif
 #ifndef NY
-#define NY 16
+#define NY 64
 #endif
 #define NMAX 200000
 #define EPS 1e-5
@@ -57,6 +57,8 @@ void kernel(double *v/*, unsigned int NX, unsigned int NY, double EPS, unsigned 
 	double f[NX*NY],vp[NX*NY];
 
 	initialization(f);
+
+	creating(v);
 
 	unsigned int n = 0;
 	double e = 2. * EPS;
