@@ -2,10 +2,10 @@
 #include "math.h"
 
 #ifndef NX
-#define NX 64
+#define NX 16
 #endif
 #ifndef NY
-#define NY 64
+#define NY 16
 #endif
 #define NMAX 200000
 #define EPS 1e-5
@@ -36,9 +36,9 @@ void creating(double *v) {
 
 void kernel(double *v/*, unsigned int NX, unsigned int NY, double EPS, unsigned int NMAX*/, bool *convFPGA, unsigned int *numIter){
 
-#pragma HLS INTERFACE m_axi depth=100 port=v bundle=gmem0
-#pragma HLS INTERFACE m_axi depth=100 port=convFPGA bundle=gmem1
-#pragma HLS INTERFACE m_axi depth=100 port=numIter bundle=gmem1
+#pragma HLS INTERFACE m_axi depth=NX*NY port=v bundle=gmem0
+#pragma HLS INTERFACE m_axi depth=1 port=convFPGA bundle=gmem1
+#pragma HLS INTERFACE m_axi depth=1 port=numIter bundle=gmem1
 
 #pragma HLS INTERFACE s_axilite port=v
 #pragma HLS INTERFACE s_axilite port=convFPGA

@@ -1,8 +1,8 @@
 #ifndef NX
-#define NX 64
+#define NX 16
 #endif
 #ifndef NY
-#define NY 64
+#define NY 16
 #endif
 #define NMAX 200000
 #define EPS 1e-5
