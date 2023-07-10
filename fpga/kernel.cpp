@@ -24,6 +24,15 @@ void initialization(double *f/*, unsigned int NX, unsigned int NY*/){
     }
 }
 
+void creating(double *v) {
+	for (int iy = 0; iy < NY; iy++) {
+	        for (int ix = 0; ix < NX; ix++) {
+	        	v[NX*iy + ix] = 0.0;
+	        }
+	}
+}
+
+
 
 void kernel(double *v/*, unsigned int NX, unsigned int NY, double EPS, unsigned int NMAX*/, bool *convFPGA, unsigned int *numIter){
 
