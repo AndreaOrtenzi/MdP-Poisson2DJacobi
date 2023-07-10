@@ -1,15 +1,15 @@
 #ifndef NX
-#define NX 4
+#define NX 16
 #endif
 #ifndef NY
-#define NY 4
+#define NY 16
 #endif
 #define NMAX 200000
 #define EPS 1e-5
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "checker.h"
 
 void kernel(double *v, bool *convFPGA, unsigned int *numIter);
 
@@ -27,6 +27,11 @@ int main(){
 	if (!converged){
 		printf("ERROR: Failed to converge\n");
 		return 1;
+	}
+
+	if(compareToFile(vFPGA,NX,NY,NMAX,EPS)!=0){
+		printf("ERROR: Converged to a wrong solution\n");
+		return 2;
 	}
 
 	printf("Converged after %d iterations (nx=%d, ny=%d, e=BHO)\n", numIter, NX, NY);
