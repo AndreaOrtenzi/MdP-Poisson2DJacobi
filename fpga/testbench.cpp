@@ -1,8 +1,8 @@
 #ifndef NX
-#define NX 16
+#define NX 4
 #endif
 #ifndef NY
-#define NY 16
+#define NY 4
 #endif
 #define NMAX 200000
 #define EPS 1e-5
@@ -24,11 +24,12 @@ int main(){
 
 	kernel(vFPGA, &converged, &numIter);
 
-	if (converged)
-		printf("Converged after %d iterations (nx=%d, ny=%d, e=BHO)\n", numIter, NX, NY);
-	else
+	if (!converged){
 		printf("ERROR: Failed to converge\n");
+		return 1;
+	}
 
+	printf("Converged after %d iterations (nx=%d, ny=%d, e=BHO)\n", numIter, NX, NY);
 	// check correctness of the results:
 	//for(int i = 0; i<N; i++){
 		//if (aCPU[i] != aFPGA[i]){

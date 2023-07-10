@@ -2,10 +2,10 @@
 #include "math.h"
 
 #ifndef NX
-#define NX 16
+#define NX 4
 #endif
 #ifndef NY
-#define NY 16
+#define NY 4
 #endif
 #define NMAX 200000
 #define EPS 1e-5
