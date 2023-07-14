@@ -53,4 +53,18 @@ int compareToFile(double* arr, size_t nx, size_t ny, size_t nmax, double eps){
     return 0;
 }
 
+template <typename T1>
+double sqm(double* reference, T1 modified[], int size)
+{
+	double s = 0.0;
+
+	for (unsigned int i = 0; i < size; i++)
+	{
+		s += (reference[i] - modified[i]) * (reference[i] - modified[i]);
+	}
+
+	s = sqrt(s / size);
+	return s;
+}
+
 #endif // __CHECKER_H_
