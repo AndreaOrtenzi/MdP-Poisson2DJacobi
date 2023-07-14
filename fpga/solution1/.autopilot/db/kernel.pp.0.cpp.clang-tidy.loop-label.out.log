@@ -1,0 +1,55 @@
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3612:5: warning: Added loop label VITIS_LOOP_16_1:   [xilinx-label-all-loops]
+    for (int iy = 0; iy < 16; iy++) {
+    ^~~
+    VITIS_LOOP_16_1: 
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3612:5: note: FIX-IT applied suggested code changes
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3613:9: warning: Added loop label VITIS_LOOP_17_2:   [xilinx-label-all-loops]
+        for (int ix = 0; ix < 16; ix++) {
+        ^~~
+        VITIS_LOOP_17_2: 
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3613:9: note: FIX-IT applied suggested code changes
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3623:2: warning: Added loop label VITIS_LOOP_27_1:   [xilinx-label-all-loops]
+ for (int iy = 0; iy < 16; iy++) {
+ ^~~
+ VITIS_LOOP_27_1: 
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3623:2: note: FIX-IT applied suggested code changes
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3624:10: warning: Added loop label VITIS_LOOP_28_2:   [xilinx-label-all-loops]
+         for (int ix = 0; ix < 16; ix++) {
+         ^~~
+         VITIS_LOOP_28_2: 
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3624:10: note: FIX-IT applied suggested code changes
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3669:2: warning: Added loop label VITIS_LOOP_65_1:   [xilinx-label-all-loops]
+ while ((e > 1e-5) && (n < 200000))
+ ^~~~~
+ VITIS_LOOP_65_1: 
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3669:2: note: FIX-IT applied suggested code changes
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3673:3: warning: Added loop label VITIS_LOOP_69_2:   [xilinx-label-all-loops]
+  for( int ix = 1; ix < (16 -1); ix++ )
+  ^~~
+  VITIS_LOOP_69_2: 
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3673:3: note: FIX-IT applied suggested code changes
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3675:4: warning: Added loop label VITIS_LOOP_71_3:   [xilinx-label-all-loops]
+   for (int iy = 1; iy < (16 -1); iy++)
+   ^~~
+   VITIS_LOOP_71_3: 
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3675:4: note: FIX-IT applied suggested code changes
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3692:3: warning: Added loop label VITIS_LOOP_88_4:   [xilinx-label-all-loops]
+  for (int ix = 1; ix < (16 -1); ix++)
+  ^~~
+  VITIS_LOOP_88_4: 
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3692:3: note: FIX-IT applied suggested code changes
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3694:4: warning: Added loop label VITIS_LOOP_90_5:   [xilinx-label-all-loops]
+   for (int iy = 1; iy < (16 -1); iy++)
+   ^~~
+   VITIS_LOOP_90_5: 
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3694:4: note: FIX-IT applied suggested code changes
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3701:3: warning: Added loop label VITIS_LOOP_97_6:   [xilinx-label-all-loops]
+  for (int ix = 1; ix < (16 -1); ix++)
+  ^~~
+  VITIS_LOOP_97_6: 
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3701:3: note: FIX-IT applied suggested code changes
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3708:3: warning: Added loop label VITIS_LOOP_104_7:   [xilinx-label-all-loops]
+  for (int iy = 1; iy < (16 -1); iy++)
+  ^~~
+  VITIS_LOOP_104_7: 
+C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp:3708:3: note: FIX-IT applied suggested code changes

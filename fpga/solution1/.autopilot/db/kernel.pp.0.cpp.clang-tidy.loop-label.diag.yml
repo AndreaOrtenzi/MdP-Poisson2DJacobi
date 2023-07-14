@@ -1,0 +1,103 @@
+---
+MainSourceFile:  'C:/Users/Leonardo/Documents/GitHub/MdP-Poisson2DJacobi/fpga/solution1/.autopilot/db/kernel.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_16_1:  '
+    FileOffset:      16
+    FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\kernel.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp'
+        Offset:          110941
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_16_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_17_2:  '
+    FileOffset:      17
+    FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\kernel.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp'
+        Offset:          110983
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_17_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_27_1:  '
+    FileOffset:      27
+    FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\kernel.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp'
+        Offset:          111217
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_27_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_28_2:  '
+    FileOffset:      28
+    FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\kernel.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp'
+        Offset:          111260
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_28_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_65_1:  '
+    FileOffset:      65
+    FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\kernel.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp'
+        Offset:          112240
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_65_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_69_2:  '
+    FileOffset:      69
+    FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\kernel.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp'
+        Offset:          112292
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_69_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_71_3:  '
+    FileOffset:      71
+    FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\kernel.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp'
+        Offset:          112337
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_71_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_88_4:  '
+    FileOffset:      88
+    FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\kernel.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp'
+        Offset:          112630
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_88_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_90_5:  '
+    FileOffset:      90
+    FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\kernel.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp'
+        Offset:          112674
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_90_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_97_6:  '
+    FileOffset:      97
+    FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\kernel.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp'
+        Offset:          112788
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_97_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_104_7:  '
+    FileOffset:      104
+    FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\kernel.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp'
+        Offset:          112963
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_104_7: '
+...

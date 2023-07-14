@@ -1,0 +1,826 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/src/hls\utils/x_hls_utils.h', 
+                   Line: 523, Column: 0 }
+Function:        _ZNK9fp_structIdE9to_doubleEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::data() const'
+    DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/src/hls\utils/x_hls_utils.h', 
+                       Line: 504, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fp_struct<double>::to_double() const'
+    DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/src/hls\utils/x_hls_utils.h', 
+                       Line: 523, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/src/hls\utils/x_hls_utils.h', 
+                   Line: 538, Column: 0 }
+Function:        _ZNK9fp_structIdE7to_ieeeEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::to_double() const'
+    DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/src/hls\utils/x_hls_utils.h', 
+                       Line: 523, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fp_struct<double>::to_ieee() const'
+    DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/src/hls\utils/x_hls_utils.h', 
+                       Line: 538, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_copysign.h', 
+                   Line: 10, Column: 0 }
+Function:        _Z16generic_copysignIdET_S0_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/src/hls\utils/x_hls_utils.h', 
+                       Line: 485, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'double generic_copysign<double>(double, double)'
+    DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_copysign.h', 
+                       Line: 10, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_copysign.h', 
+                   Line: 10, Column: 0 }
+Function:        _Z16generic_copysignIdET_S0_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::to_ieee() const'
+    DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/src/hls\utils/x_hls_utils.h', 
+                       Line: 538, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'double generic_copysign<double>(double, double)'
+    DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_copysign.h', 
+                       Line: 10, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_fabs.h', 
+                   Line: 12, Column: 0 }
+Function:        _Z12generic_fabsIdET_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'double generic_copysign<double>(double, double)'
+    DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_copysign.h', 
+                       Line: 10, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'double generic_fabs<double>(double)'
+    DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_fabs.h', 
+                       Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib\hlsmath\src\c\fabsdouble.cpp', 
+                   Line: 7, Column: 0 }
+Function:        fabs
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'double generic_fabs<double>(double)'
+    DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_fabs.h', 
+                       Line: 12, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          fabs
+    DebugLoc:        { File: 'C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib\hlsmath\src\c\fabsdouble.cpp', 
+                       Line: 7, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'creating(double*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 26, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: fpga/kernel.cpp, Line: 27, Column: 19 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '256'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        v16seq
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_27_1
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:27:19'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 29, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.i.store.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: fpga/kernel.cpp, Line: 76, Column: 7 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_71_3
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:71:21'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 76, Column: 25 }
+  - OrigDirection:   read
+  - OrigID:          for.body6.load.22
+  - OrigAccess:      load
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 79, Column: 29 }
+  - OrigDirection:   read
+  - OrigID:          for.body6.load.41
+  - OrigAccess:      load
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 76, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.body6.load.19
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: fpga/kernel.cpp, Line: 97, Column: 20 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '14'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep19seq
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_97_6
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:97:20'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 99, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          for.inc102.load.8
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: fpga/kernel.cpp, Line: 97, Column: 20 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '14'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep22seq
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_97_6
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:97:20'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 100, Column: 25 }
+  - OrigDirection:   read
+  - OrigID:          for.inc102.load.14
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: fpga/kernel.cpp, Line: 97, Column: 20 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '14'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep23seq
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_97_6
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:97:20'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 100, Column: 23 }
+  - OrigDirection:   write
+  - OrigID:          for.inc102.store.18
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: fpga/kernel.cpp, Line: 65, Column: 19 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_65_1
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:65:19'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: fpga/kernel.cpp, Line: 76, Column: 7 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 76, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_71_3
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:71:21'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: fpga/kernel.cpp, Line: 77, Column: 7 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 77, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.body6.load.28
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_71_3
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:71:21'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: fpga/kernel.cpp, Line: 77, Column: 28 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 77, Column: 28 }
+  - OrigDirection:   read
+  - OrigID:          for.body6.load.34
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_71_3
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:71:21'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: fpga/kernel.cpp, Line: 92, Column: 17 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 92, Column: 17 }
+  - OrigDirection:   write
+  - OrigID:          for.inc71.store.9
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_90_5
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:90:21'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: fpga/kernel.cpp, Line: 101, Column: 14 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 99, Column: 17 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 101, Column: 14 }
+  - OrigDirection:   read
+  - OrigID:          for.inc102.load.19
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: fpga/kernel.cpp, Line: 99, Column: 17 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 101, Column: 14 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 99, Column: 17 }
+  - OrigDirection:   write
+  - OrigID:          for.inc102.store.10
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: fpga/kernel.cpp, Line: 106, Column: 19 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 106, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          for.inc136.load.7
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_104_7
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:104:21'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: fpga/kernel.cpp, Line: 107, Column: 25 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 107, Column: 25 }
+  - OrigDirection:   read
+  - OrigID:          for.inc136.load.12
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_104_7
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:104:21'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: fpga/kernel.cpp, Line: 106, Column: 17 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 106, Column: 17 }
+  - OrigDirection:   write
+  - OrigID:          for.inc136.store.9
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_104_7
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:104:21'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: fpga/kernel.cpp, Line: 107, Column: 23 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 107, Column: 23 }
+  - OrigDirection:   write
+  - OrigID:          for.inc136.store.15
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_104_7
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:104:21'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: fpga/kernel.cpp, Line: 97, Column: 20 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            double
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 97, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          scevgep19seq
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_97_6
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:97:20'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: fpga/kernel.cpp, Line: 97, Column: 20 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            double
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 97, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          scevgep22seq
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_97_6
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:97:20'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: fpga/kernel.cpp, Line: 97, Column: 20 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            double
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 97, Column: 20 }
+  - OrigDirection:   write
+  - OrigID:          scevgep23seq
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_97_6
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:97:20'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: fpga/kernel.cpp, Line: 76, Column: 7 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            double
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 76, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: fpga/kernel.cpp, Line: 27, Column: 19 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            double
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 27, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          v16seq
+  - ArrayName:       v
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_28_2
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:28:27'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: fpga/kernel.cpp, Line: 65, Column: 19 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_65_1
+  - String:          '''('
+  - LoopLoc:         'fpga/kernel.cpp:65:19'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            BurstConflict
+DebugLoc:        { File: fpga/kernel.cpp, Line: 97, Column: 20 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Could not burst due to multiple potential '
+  - Direction:       reads
+  - String:          ' to the same bundle in the same region.'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 97, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            BurstConflict
+DebugLoc:        { File: fpga/kernel.cpp, Line: 97, Column: 20 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Could not burst due to multiple potential '
+  - Direction:       reads
+  - String:          ' to the same bundle in the same region.'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 97, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            BurstConflict
+DebugLoc:        { File: fpga/kernel.cpp, Line: 97, Column: 20 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Could not burst due to multiple potential '
+  - Direction:       writes
+  - String:          ' to the same bundle in the same region.'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 97, Column: 20 }
+  - OrigDirection:   write
+  - OrigID:          seq4
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: fpga/kernel.cpp, Line: 27, Column: 19 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '256'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_27_1
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:27:19'
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: fpga/kernel.cpp, Line: 27, Column: 19 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '256'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_27_1
+  - String:          '''('
+  - LoopLoc:         'fpga/kernel.cpp:27:19'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: fpga/kernel.cpp, Line: 76, Column: 7 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'kernel(double*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: fpga/kernel.cpp, Line: 76, Column: 7 }
+Function:        _Z6kernelPdPbPj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

@@ -1,0 +1,29 @@
+{
+  "0": {
+    "basicblocks": 20,
+    "calls": "1 1 1 1 1 1",
+    "file": "kernel.cpp",
+    "fileloc": 36,
+    "instructions": 158,
+    "loads": {
+      "G": 1,
+      "L": 1,
+      "T": 5
+    },
+    "name": "kernel",
+    "stores": {
+      "L": 1,
+      "T": 6
+    },
+    "total_instructions": 206
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "fabsdouble.cpp",
+    "fileloc": 7,
+    "instructions": 8,
+    "name": "fabs",
+    "total_instructions": 8
+  }
+}

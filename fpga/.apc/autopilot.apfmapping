@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="kernel.cpp" path="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\kernel.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="16_16_200000_0.000010.ref" path="C:\Users\Leonardo\Desktop\reference\16_16_200000_0.000010.ref"/>
+    <originFiles name="checker.h" path="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\checker.h"/>
+    <originFiles name="testbench.cpp" path="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

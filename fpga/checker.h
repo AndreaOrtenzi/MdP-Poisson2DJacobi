@@ -8,6 +8,8 @@ int getFilename(char *filename, size_t maxFileLen, size_t nx, size_t ny, size_t 
    return snprintf(filename, maxFileLen, "%zu_%zu_%zu_%f.ref", nx, ny, nmax, eps);
 }
 
+
+
 void writeToFile(double* arr, size_t nx, size_t ny, size_t nmax, double eps){
     size_t maxFileLen = 150; 
     char filename[maxFileLen];
@@ -41,6 +43,8 @@ int compareToFile(double* arr, size_t nx, size_t ny, size_t nmax, double eps){
     double *tmp = (double *) malloc(nx * ny * sizeof(double));
     if(!tmp) {perror("compareToFile: malloc failed");return -1;}
     fread( tmp, sizeof(double), nx * ny, fh ) ;
+    for (size_t i = 0; i<7; i++)
+    	printf("%f\n", tmp[i]);
     for(size_t i = 0; i<ny*nx; i++){
         if(!approximatelyEqual(arr[i],tmp[i],approxEps)){
             printf("Not equal! idx: %zu, was: %f, expected: %f\n", i,arr[i],tmp[i]);
@@ -50,7 +54,29 @@ int compareToFile(double* arr, size_t nx, size_t ny, size_t nmax, double eps){
     printf("Correct\n");
     fclose(fh);
     free(tmp);
+
     return 0;
 }
+
+template <typename T1>
+  double sqm(double* reference, T1 modified[], int size)
+  {
+	double s = 0.0;
+	/*size_t n = sizeof(reference)/sizeof(reference[0]);
+	printf("\n %f", n);
+	size_t m = sizeof(modified)/sizeof(modified[0]);
+	if (size_r != size_m)
+	{
+		printf("Different size!");
+		return 2;
+	}  */
+	for (unsigned int i = 0; i < size; i++)
+	{
+		s += (reference[i] - modified[i]) * (reference[i] - modified[i]);
+	}
+
+	s = sqrt(s / size);
+  	return s;
+  }
 
 #endif // __CHECKER_H_

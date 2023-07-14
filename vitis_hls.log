@@ -1,0 +1,55 @@
+NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'Leonardo' on host 'laptop-1mh40rfg' (Windows NT_amd64 version 6.2) on Fri Jul 14 16:05:18 +0200 2023
+INFO: [HLS 200-10] In directory 'C:/Users/Leonardo/Documents/GitHub/MdP-Poisson2DJacobi'
+Sourcing Tcl script 'C:/Users/Leonardo/Documents/GitHub/MdP-Poisson2DJacobi/fpga/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/Leonardo/Documents/GitHub/MdP-Poisson2DJacobi/fpga/solution1/csim.tcl
+INFO: [HLS 200-1510] Running: open_project fpga 
+INFO: [HLS 200-10] Opening project 'C:/Users/Leonardo/Documents/GitHub/MdP-Poisson2DJacobi/fpga'.
+INFO: [HLS 200-1510] Running: set_top kernel 
+INFO: [HLS 200-1510] Running: add_files fpga/kernel.cpp 
+INFO: [HLS 200-10] Adding design file 'fpga/kernel.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../../../Desktop/reference/16_16_200000_0.000010.ref -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '../../../Desktop/reference/16_16_200000_0.000010.ref' to the project
+INFO: [HLS 200-1510] Running: add_files -tb fpga/checker.h -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'fpga/checker.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb fpga/testbench.cpp -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'fpga/testbench.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/Leonardo/Documents/GitHub/MdP-Poisson2DJacobi/fpga/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1464] Running solution command: config_export -flow=syn
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -flow syn -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./fpga/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name kernel kernel 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../testbench.cpp in debug mode
+   Generating csim.exe
+Converged after 188 iterations (nx=16, ny=16, e=BHO)
+L'errore tra double e f è: 2.6641e-007
+0.000000
+0.000000
+0.908238
+1.307386
+1.270940
+0.885944
+0.249523
+Not equal! idx: 7, was: -0.534489, expected: 0.000000
+ERROR: Converged to a wrong solution
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.66 seconds; current allocated memory: 0.441 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 12.236 seconds; peak allocated memory: 1.041 GB.

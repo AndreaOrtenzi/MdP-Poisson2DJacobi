@@ -40,6 +40,8 @@ int compareToFile(double* arr, size_t nx, size_t ny, size_t nmax, double eps){
     double *tmp = (double *) malloc(nx * ny * sizeof(double));
     if(!tmp) {perror("compareToFile: malloc failed");return -1;}
     fread( tmp, sizeof(double), nx * ny, fh ) ;
+    for (size_t j = 0; j<10; j++)
+        printf("%f/n", tmp[j]);
     for(size_t i = 0; i<ny*nx; i++){
         if(!approximatelyEqual(arr[i],tmp[i],approxEps)){
             printf("Not equal! idx: %zu, was: %f, expected: %f\n", i,arr[i],tmp[i]);
