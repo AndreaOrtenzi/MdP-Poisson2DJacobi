@@ -10,21 +10,22 @@
 #define NMAX 200000
 #define EPS 1e-5
 
-
-void initialization(double *f/*, unsigned int NX, unsigned int NY*/){
+template <typename real>
+void initialization(real *f/*, unsigned int NX, unsigned int NY*/){
 
 	// Initialize input
     for (int iy = 0; iy < NY; iy++) {
         for (int ix = 0; ix < NX; ix++) {
-          const double x = 2.0 * ix / (NX - 1.0) - 1.0;
-          const double y = 2.0 * iy / (NY - 1.0) - 1.0;
+          const real x = 2.0 * ix / (NX - 1.0) - 1.0;
+          const real y = 2.0 * iy / (NY - 1.0) - 1.0;
           // forcing term is a sinusoid
           f[NX * iy + ix] = sin(x + y);
         }
     }
 }
 
-void creating(double *v) {
+template <typename real>
+void creating(real *v) {
 	for (int iy = 0; iy < NY; iy++) {
 	        for (int ix = 0; ix < NX; ix++) {
 	        	v[NX*iy + ix] = 0.0;
@@ -33,8 +34,8 @@ void creating(double *v) {
 }
 
 
-
-void kernel(double *v/*, unsigned int NX, unsigned int NY, double EPS, unsigned int NMAX*/, bool *convFPGA, unsigned int *numIter){
+template <typename real>
+void kernel(real *v/*, unsigned int NX, unsigned int NY, double EPS, unsigned int NMAX*/, bool *convFPGA, unsigned int *numIter){
 
 #pragma HLS INTERFACE m_axi depth=NX*NY port=v bundle=gmem0
 #pragma HLS INTERFACE m_axi depth=1 port=convFPGA bundle=gmem1
@@ -54,14 +55,14 @@ void kernel(double *v/*, unsigned int NX, unsigned int NY, double EPS, unsigned 
 	//memcpy(b_local,b, sizeof(float)*N);
 
 
-	double f[NX*NY],vp[NX*NY];
+	real f[NX*NY],vp[NX*NY];
 
 	initialization(f);
 
 	creating(v);
 
 	unsigned int n = 0;
-	double e = 2. * EPS;
+	real e = 2. * EPS;
 
 	while ((e > EPS) && (n < NMAX))
 	{
@@ -71,7 +72,7 @@ void kernel(double *v/*, unsigned int NX, unsigned int NY, double EPS, unsigned 
 		{
 			for (int iy = 1; iy < (NY-1); iy++)
 			{
-				double d;
+				real d;
 
 				vp[iy*NX+ix] = -0.25 * (f[iy*NX+ix] -
 					(v[NX*iy     + ix+1] + v[NX*iy     + ix-1] +
@@ -84,7 +85,7 @@ void kernel(double *v/*, unsigned int NX, unsigned int NY, double EPS, unsigned 
 
 		// Update v and compute error as well as error weight factor
 
-		double w = 0.0;
+		real w = 0.0;
 
 		for (int ix = 1; ix < (NX-1); ix++)
 		{
