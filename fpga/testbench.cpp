@@ -26,9 +26,9 @@ int main(){
 
 	if (!converged){
 		std::cout << "ERROR: Failed to converge\n";
-		return 1;
+		// return 1;
 	}
-	std::cout << "Converged after " << numIter << " iterations (nx= " << NX << ", ny= " << NY << ", e=BHO)\n" << std::endl;
+	std::cout << "Converged after " << numIter << " iterations (nx= " << NX << ", ny= " << NY << ")\n" << std::endl;
 
 
 	// Compute error between types
@@ -40,16 +40,30 @@ int main(){
 	kernel_double(vFPGA_double, NX, NY, EPS, NMAX, &converged_double, &numIter_double);
 
 #if not FIXED
-	error = sqm(vFPGA_double, vFPGA, NX*NY);
-	// error = 0.0;
-	std::cout << "L'errore tra double e " << typeid(vFPGA[0]).name() << " è: " << error << ", correct iter num: " << numIter_double << std::endl;
-#endif
-/*
-	if(compareToFile(vFPGA_double,NX,NY,NMAX,EPS)!=0){
-		printf("ERROR: Converged to a wrong solution\n");
-		return 2;
+	{
+		error = sqm(vFPGA_double, vFPGA, NX*NY);
+		// error = 0.0;
+		std::cout << "L'errore tra double e " << typeid(vFPGA[0]).name() << " è: " << error << ", correct iter num: " << numIter_double << std::endl;
+
+
+		int res = compareToFile(vFPGA_double,NX,NY,NMAX,EPS);
+		switch(res){
+		case 0:
+			std::cout << "Converged to the correct solution\n" << std::endl;
+			break;
+		case -1:
+			std::cout << "Couldn't find the file with the results" << std::endl;
+			break;//return 2;
+		case 1:
+			std::cout << "ERROR: Converged to a wrong solution\n" << std::endl;
+			break; // return 3;
+		default:
+			std::cout << "ERROR in sqm" << std::endl;
+			return 4;
+		}
+
 	}
-*/
+#endif
 	// Compute max and min values
     double minE = LONG_MAX, maxE = 0.0;
 

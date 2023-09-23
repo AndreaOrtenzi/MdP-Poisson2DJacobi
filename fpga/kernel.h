@@ -1,17 +1,18 @@
+#ifndef NX
+#define NX 16
+#endif
+#ifndef NY
+#define NY 16
+#endif
+
 #ifndef KERNEL_INCL
 #define KERNEL_INCL
 
-#ifndef NX
-#define NX 8
-#endif
-#ifndef NY
-#define NY 8
-#endif
 #define NMAX 200000
 #define EPS 1e-5
 
 #ifndef FIXED
-#define FIXED true
+#define FIXED false
 #endif
 
 #if FIXED
@@ -24,6 +25,8 @@
 #define REAL float
 #endif
 #endif
+
+#include <cstring>
 
 
 void initialization(REAL *f/*, unsigned int NX, unsigned int NY*/);
