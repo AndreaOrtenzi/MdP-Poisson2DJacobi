@@ -167,14 +167,14 @@ void kernel(REAL *v_out, bool *convFPGA, unsigned int *numIter) {
 
 
 		REAL w = 0.0;
-		w_second_loop: for (unsigned int iy = 0; iy < NY; iy++)
+		w_second_loop: for (unsigned int iy = 0; iy < (NY*NX / unroll_factor); iy++)
 		{
 			REAL w_local = 0.0;
 			w_in_second_loop:for (unsigned int ix = 0; ix < unroll_factor; ix++)
 			{
 			#pragma HLS UNROLL
 #if FIXED
-					w_local += hls::fabs(v[unroll_factor*iy+ix]); // dependency here on w load and store
+					w_local += hls::fabs(v[unroll_factor*iy+ix]);
 #else
 					w_local += std::fabs(v[unroll_factor*iy+ix]);
 #endif
@@ -183,7 +183,7 @@ void kernel(REAL *v_out, bool *convFPGA, unsigned int *numIter) {
 		}
 
 
-		w /= (NX * NY);
+		w *= 1.0/(NX * NY);
 		e /= w;
 
 		//if ((n % 10) == 0)
