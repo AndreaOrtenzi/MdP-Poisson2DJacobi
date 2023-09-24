@@ -22,15 +22,6 @@ inline void initialization(REAL *f, REAL *v){
     }
 }
 
-
-inline void creation(REAL *v) {
-	creation_loop:for (int i = 0; i < NY*NX; i++) { // flattering a loop nest
-		// for (int ix = 0; ix < NX; ix++) {
-			v[i] = 0.0;
-		// }
-	}
-}
-
 template <unsigned int size, class T>
 inline void mycpy(T *from,T *to){
 
@@ -60,7 +51,6 @@ void kernel(REAL *v_out, bool *convFPGA, unsigned int *numIter) {
 
 	initialization(f,v);
 
-	// creation(v);
 	vp[0]=0.0;
 	vp[NX-1]=0.0;
 	vp[NX*(NY-1)]=0.0;
@@ -68,9 +58,8 @@ void kernel(REAL *v_out, bool *convFPGA, unsigned int *numIter) {
 
 	unsigned int n = 0;
 	REAL e = 2. * EPS;
-	const REAL quart = -0.25;
-
-
+	constexpr REAL quart = -0.25;
+	constexpr REAL invh2 = 1.0/(N*N); // 1/(n^2)
 
 	while_loop: while ((e > EPS) && (n < NMAX)) //
 	{
@@ -80,7 +69,7 @@ void kernel(REAL *v_out, bool *convFPGA, unsigned int *numIter) {
 		{
 			no_e_in_first_loop:for (unsigned int ix = 1; ix < (NX-1); ix++)
 			{
-				vp[iy*NX+ix] = quart * (f[iy*NX+ix] -
+				vp[iy*NX+ix] = quart * (f[iy*NX+ix]*invh2 -
 					(v[NX*iy     + ix+1] + v[NX*iy     + ix-1] +
 					 v[NX*(iy+1) + ix  ] + v[NX*(iy-1) + ix  ]));
 
@@ -134,7 +123,7 @@ void kernel(REAL *v_out, bool *convFPGA, unsigned int *numIter) {
 			{
 				REAL d;
 
-				v[iy*NX+ix] = quart * (f[iy*NX+ix] - // Inferring partial write operation for 'vp'
+				v[iy*NX+ix] = quart * ( f[iy*NX+ix]*invh2 - // Inferring partial write operation for 'vp'
 					(vp[NX*iy     + ix+1] + vp[NX*iy     + ix-1] + // bus read operation on v
 					 vp[NX*(iy+1) + ix  ] + vp[NX*(iy-1) + ix  ])); // unable to schedule bus read operation on port gmem0 due to
 				// limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array

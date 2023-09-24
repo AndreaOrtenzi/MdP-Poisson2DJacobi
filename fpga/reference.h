@@ -1,46 +1,48 @@
 #include <math.h>
 
-void kernel_double(double *v, unsigned int NX, unsigned int NY, double EPS, unsigned int NMAX, bool *convFPGA, unsigned int *numIter){
+void kernel_double(double *v, unsigned int nx, unsigned int ny, double EPS, unsigned int NMAX, bool *convFPGA, unsigned int *numIter){
 
 
-	double f[NX*NY],vp[NX*NY];
+	double f[nx*ny],vp[nx*ny];
 
 	// Initialize input
-	for (unsigned int iy = 0; iy < NY; iy++) {
-		for (unsigned int ix = 0; ix < NX; ix++) {
-		  const double x = 2.0 * ix / (NX - 1.0) - 1.0;
-		  const double y = 2.0 * iy / (NY - 1.0) - 1.0;
+	for (unsigned int iy = 0; iy < ny; iy++) {
+		for (unsigned int ix = 0; ix < nx; ix++) {
+		  const double x = 2.0 * ix / (nx - 1.0) - 1.0;
+		  const double y = 2.0 * iy / (ny - 1.0) - 1.0;
 		  // forcing term is a sinusoid
-		  f[NX * iy + ix] = std::sin(x + y);
+		  f[nx * iy + ix] = std::sin(x + y);
 		}
 	}
 
-	for (unsigned int iy = 0; iy < NY; iy++) {
-		for (int ix = 0; ix < NX; ix++) {
-			v[NX*iy + ix] = 0.0;
+	for (unsigned int iy = 0; iy < ny; iy++) {
+		for (int ix = 0; ix < nx; ix++) {
+			v[nx*iy + ix] = 0.0;
 		}
 	}
 
 
 	unsigned int n = 0;
 	double e = 2. * EPS;
-	const double quart = -0.25;
+
+	constexpr double quart = -0.25;
+	const double invh2 = 1.0/(nx*ny); // 1/(n^2)
 
 	while ((e > EPS) && (n < NMAX))
 	{
 		e = 0.0;
 
-		for( int ix = 1; ix < (NX-1); ix++ )
+		for( int ix = 1; ix < (nx-1); ix++ )
 		{
-			for (int iy = 1; iy < (NY-1); iy++)
+			for (int iy = 1; iy < (ny-1); iy++)
 			{
 				double d;
 
-				vp[iy*NX+ix] = quart * (f[iy*NX+ix] -
-					(v[NX*iy     + ix+1] + v[NX*iy     + ix-1] +
-					 v[NX*(iy+1) + ix  ] + v[NX*(iy-1) + ix  ]));
+				vp[iy*nx+ix] = quart * (invh2*f[iy*nx+ix] -
+					(v[nx*iy     + ix+1] + v[nx*iy     + ix-1] +
+					 v[nx*(iy+1) + ix  ] + v[nx*(iy-1) + ix  ]));
 
-				d = std::fabs(vp[NX*iy+ix] - v[NX*iy+ix]);
+				d = std::fabs(vp[nx*iy+ix] - v[nx*iy+ix]);
 				e = (d > e) ? d : e;
 			}
 		}
@@ -49,32 +51,32 @@ void kernel_double(double *v, unsigned int NX, unsigned int NY, double EPS, unsi
 
 		double w = 0.0;
 
-		for (int ix = 1; ix < (NX-1); ix++)
+		for (int ix = 1; ix < (nx-1); ix++)
 		{
-			for (int iy = 1; iy < (NY-1); iy++)
+			for (int iy = 1; iy < (ny-1); iy++)
 			{
-				v[NX*iy+ix] = vp[NX*iy+ix];
-				w += std::fabs(v[NX*iy+ix]);
+				v[nx*iy+ix] = vp[nx*iy+ix];
+				w += std::fabs(v[nx*iy+ix]);
 			}
 		}
 
-		for (int ix = 1; ix < (NX-1); ix++)
+		for (int ix = 1; ix < (nx-1); ix++)
 		{
-			v[NX*0      + ix] = v[NX*(NY-2) + ix];
-			v[NX*(NY-1) + ix] = v[NX*1      + ix];
+			v[nx*0      + ix] = v[nx*(ny-2) + ix];
+			v[nx*(ny-1) + ix] = v[nx*1      + ix];
 
-			w += std::fabs(v[NX*0+ix]) + std::fabs(v[NX*(NY-1)+ix]);
+			w += std::fabs(v[nx*0+ix]) + std::fabs(v[nx*(ny-1)+ix]);
 		}
 
-		for (int iy = 1; iy < (NY-1); iy++)
+		for (int iy = 1; iy < (ny-1); iy++)
 		{
-			v[NX*iy + 0]      = v[NX*iy + (NX-2)];
-			v[NX*iy + (NX-1)] = v[NX*iy + 1     ];
+			v[nx*iy + 0]      = v[nx*iy + (nx-2)];
+			v[nx*iy + (nx-1)] = v[nx*iy + 1     ];
 
-			w += std::fabs(v[NX*iy+0]) + std::fabs(v[NX*iy+(NX-1)]);
+			w += std::fabs(v[nx*iy+0]) + std::fabs(v[nx*iy+(nx-1)]);
 		}
 
-		w /= (NX * NY);
+		w /= (nx * ny);
 		e /= w;
 
 		//if ((n % 10) == 0)

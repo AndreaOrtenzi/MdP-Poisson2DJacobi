@@ -1,8 +1,12 @@
+#ifndef N
+#define N 128
+#endif
+
 #ifndef NX
-#define NX 16
+#define NX N
 #endif
 #ifndef NY
-#define NY 16
+#define NY N
 #endif
 
 #ifndef KERNEL_INCL
@@ -22,16 +26,12 @@
 #else
 #include "math.h"
 #ifndef REAL
-#define REAL float
+#define REAL float // change also BYTES_REAL
+#endif
 #endif
 #endif
 
 #include <cstring>
-
-
-void initialization(REAL *f/*, unsigned int NX, unsigned int NY*/);
-
-void creating(REAL *v);
 
 void kernel(REAL *v/*, unsigned int NX, unsigned int NY, double EPS, unsigned int NMAX*/, bool *convFPGA, unsigned int *numIter);
 
