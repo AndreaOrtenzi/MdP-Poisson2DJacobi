@@ -11,8 +11,6 @@
 
 #include "kernel.h"
 
-// template <typename real> void kernel(real *v, bool *convFPGA, unsigned int *numIter);
-
 using real = REAL;
 
 int main(){
