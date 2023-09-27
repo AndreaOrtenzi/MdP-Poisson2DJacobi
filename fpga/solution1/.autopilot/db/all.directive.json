@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "kernel",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "kernel"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/Leonardo/Documents/GitHub/MdP-Poisson2DJacobi/fpga/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "kernel",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "kernel"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/Leonardo/Documents/GitHub/MdP-Poisson2DJacobi/fpga/solution1/csynth.tcl",
+    "sourceLine": 24,
+    "success": true
+  }
+]

@@ -1,0 +1,383 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                   Line: 87, Column: 22 }
+Function:        _ZN14cordic_apfixed19cordic_circ_apfixedILi35ELi3ELi0EEEvR8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_S5_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_87_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: fpga/kernel.cpp, Line: 35, Column: 0 }
+Function:        _Z6kernelP8ap_fixedILi32ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEPbPj
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        w_in_second_loop
+  - String:          ''' ('
+  - LoopLoc:         'fpga/kernel.cpp:173:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          kernel
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: fpga/kernel.cpp, Line: 5, Column: 0 }
+Function:        _Z14initializationP8ap_fixedILi32ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        in_init_loop
+  - String:          ''' ('
+  - LoopLoc:         'fpga/kernel.cpp:9:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          initialization
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '16'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '16'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: fpga/kernel.cpp, Line: 5, Column: 0 }
+Function:        _Z14initializationP8ap_fixedILi32ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        in_init_loop
+  - String:          ''' ('
+  - LoopLoc:         'fpga/kernel.cpp:9:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          initialization
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PipelineRemovedByUnroll
+DebugLoc:        { File: fpga/kernel.cpp, Line: 5, Column: 0 }
+Function:        _Z14initializationP8ap_fixedILi32ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Pipeline directive for loop '''
+  - LoopName:        in_init_loop
+  - String:          ''' ('
+  - LoopLoc:         'fpga/kernel.cpp:9:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          initialization
+  - String:          ''' has been removed because the loop is unrolled completely'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                   Line: 79, Column: 0 }
+Function:        _ZN14cordic_apfixed19cordic_circ_apfixedILi35ELi3ELi0EEEvR8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_S5_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_87_1
+  - String:          ''' ('
+  - LoopLoc:         'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'cordic_apfixed::cordic_circ_apfixed<35, 3, 0>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '35'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PipelineRemovedByUnroll
+DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                   Line: 79, Column: 0 }
+Function:        _ZN14cordic_apfixed19cordic_circ_apfixedILi35ELi3ELi0EEEvR8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_S5_
+Args:            
+  - String:          'Pipeline directive for loop '''
+  - LoopName:        VITIS_LOOP_87_1
+  - String:          ''' ('
+  - LoopLoc:         'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'cordic_apfixed::cordic_circ_apfixed<35, 3, 0>'
+  - String:          ''' has been removed because the loop is unrolled completely'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                   Line: 228, Column: 0 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi33ELi6EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void cordic_apfixed::circ_range_redux<33, 6, 34>(ap_ufixed<33, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<34, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                       Line: 60, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void cordic_apfixed::generic_sincos<33, 6>(ap_fixed<33, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((33) - (6)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((33) - (6)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                       Line: 228, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h', 
+                   Line: 1934, Column: 0 }
+Function:        _ZN3hls3sinILi33ELi6EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void cordic_apfixed::generic_sincos<33, 6>(ap_fixed<33, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((33) - (6)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((33) - (6)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                       Line: 228, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_fixed<((33) - (6)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sin<33, 6>(ap_fixed<33, 6, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h', 
+                       Line: 1934, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h', 
+                   Line: 1404, Column: 0 }
+Function:        _ZN3hls4fabsILi33ELi6EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ap_fixed<33, 6, (ap_q_mode)5, (ap_o_mode)3, 0> fabs_fixed<33, 6>(ap_fixed<33, 6, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_round_copysign_apfixed.h', 
+                       Line: 177, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_fixed<33, 6, (ap_q_mode)5, (ap_o_mode)3, 0> hls::fabs<33, 6>(ap_fixed<33, 6, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h', 
+                       Line: 1404, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h', 
+                   Line: 1404, Column: 0 }
+Function:        _ZN3hls4fabsILi32ELi5EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0> fabs_fixed<32, 5>(ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_round_copysign_apfixed.h', 
+                       Line: 177, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0> hls::fabs<32, 5>(ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h', 
+                       Line: 1404, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: fpga/kernel.cpp, Line: 35, Column: 0 }
+Function:        _Z6kernelP8ap_fixedILi32ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEPbPj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ap_fixed<33, 6, (ap_q_mode)5, (ap_o_mode)3, 0> hls::fabs<33, 6>(ap_fixed<33, 6, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h', 
+                       Line: 1404, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'kernel(ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 35, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: fpga/kernel.cpp, Line: 46, Column: 18 }
+Function:        _Z6kernelP8ap_fixedILi32ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEPbPj
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          f
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: fpga/kernel.cpp, Line: 46, Column: 27 }
+Function:        _Z6kernelP8ap_fixedILi32ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEPbPj
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          vp
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: fpga/kernel.cpp, Line: 46, Column: 37 }
+Function:        _Z6kernelP8ap_fixedILi32ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEPbPj
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          v
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: fpga/kernel.cpp, Line: 202, Column: 2 }
+Function:        _Z6kernelP8ap_fixedILi32ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEPbPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '256'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        v_out4068seq
+  - ArrayName:       v_out
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:202:2'
+  - String:          ' '
+  - Function:        'kernel(ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 35, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          load-store-loop.store.261
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: fpga/kernel.cpp, Line: 64, Column: 14 }
+Function:        _Z6kernelP8ap_fixedILi32ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEPbPj
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        while_loop
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:64:14'
+  - String:          ' '
+  - Function:        'kernel(ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: fpga/kernel.cpp, Line: 202, Column: 2 }
+Function:        _Z6kernelP8ap_fixedILi32ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEPbPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - OrigLength:      '256'
+  - String:          ' x '
+  - OrigWords:       '32'
+  - String:          'bit words has been widened by '
+  - Factor:          '16'
+  - String:          ': '
+  - Length:          '16'
+  - String:          ' x '
+  - Words:           '512'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 202, Column: 2 }
+  - OrigDirection:   write
+  - OrigID:          v_out4068seq
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq
+  - ArrayName:       v_out
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'fpga/kernel.cpp:202:2'
+  - String:          ' '
+  - Function:        'kernel(ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: fpga/kernel.cpp, Line: 64, Column: 14 }
+Function:        _Z6kernelP8ap_fixedILi32ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEPbPj
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        while_loop
+  - String:          '''('
+  - LoopLoc:         'fpga/kernel.cpp:64:14'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: fpga/kernel.cpp, Line: 202, Column: 2 }
+Function:        _Z6kernelP8ap_fixedILi32ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEPbPj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '16'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'kernel(ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>*, bool*, unsigned int*)'
+    DebugLoc:        { File: fpga/kernel.cpp, Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: fpga/kernel.cpp, Line: 202, Column: 2 }
+Function:        _Z6kernelP8ap_fixedILi32ELi5EL9ap_q_mode5EL9ap_o_mode3ELi0EEPbPj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '16'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

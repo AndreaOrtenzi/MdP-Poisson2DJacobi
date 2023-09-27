@@ -1,0 +1,126 @@
+{
+  "0": {
+    "basicblocks": 67,
+    "calls": "2",
+    "file": "kernel.cpp",
+    "fileloc": 35,
+    "instructions": 508,
+    "loads": {
+      "L": 18
+    },
+    "name": "kernel",
+    "stores": {
+      "L": 18,
+      "T": 2
+    },
+    "total_instructions": 14975
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 58,
+    "instructions": 67,
+    "loads": {
+      "L": 2
+    },
+    "name": "circ_range_redux<33, 6, 34>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 909
+  },
+  "2": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "kernel.cpp",
+    "fileloc": 5,
+    "instructions": 74,
+    "loads": {
+      "L": 2
+    },
+    "name": "initialization",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 6336
+  },
+  "3": {
+    "basicblocks": 19,
+    "calls": "1 7",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 227,
+    "instructions": 274,
+    "loads": {
+      "L": 16
+    },
+    "name": "generic_sincos<33, 6>",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 4805
+  },
+  "4": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "hls_round_copysign_apfixed.h",
+    "fileloc": 176,
+    "instructions": 29,
+    "loads": {
+      "L": 1
+    },
+    "name": "fabs_fixed<32, 5>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 176
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_cordic_apfixed.cpp",
+    "fileloc": 41,
+    "instructions": 129,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 2433
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "5",
+    "file": "hls_cordic_apfixed.pp.cpp",
+    "fileloc": 0,
+    "instructions": 2,
+    "name": "",
+    "total_instructions": 2435
+  },
+  "7": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 77,
+    "instructions": 222,
+    "loads": {
+      "L": 13
+    },
+    "name": "cordic_circ_apfixed<35, 3, 0>",
+    "stores": {
+      "L": 13
+    },
+    "total_instructions": 1983
+  },
+  "8": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "hls_round_copysign_apfixed.h",
+    "fileloc": 176,
+    "instructions": 29,
+    "loads": {
+      "L": 1
+    },
+    "name": "fabs_fixed<33, 6>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 177
+  }
+}

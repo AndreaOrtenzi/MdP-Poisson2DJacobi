@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1695829379067">
+  <ports id="1" name="d" type="PortType" originalName="pf" coreId="1346820640" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="11" name="ap_return" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="47" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="48" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="49" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="52" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="57" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="62" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="63" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="68" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="69" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="72" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="73" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="74" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="75" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="76" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="81" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="82" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="85" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="89" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="90" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="91" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="92" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="93" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <edges id="96" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="97" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="102" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="107" source_obj="//@regions.0/@basic_blocks.0/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="110" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.23"/>
+  <edges id="111" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.23"/>
+  <edges id="112" source_obj="//@regions.0/@basic_blocks.0/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.24"/>
+  <edges id="113" source_obj="//@regions.0/@basic_blocks.0/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.24"/>
+  <edges id="116" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.25"/>
+  <edges id="117" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.26"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.0/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.26"/>
+  <edges id="119" source_obj="//@regions.0/@basic_blocks.0/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.27"/>
+  <edges id="121" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="123" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="125" source_obj="//@regions.0/@basic_blocks.0/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="126" source_obj="//@regions.0/@basic_blocks.0/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="127" source_obj="//@regions.0/@basic_blocks.0/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="131" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="132" source_obj="//@regions.0/@basic_blocks.0/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="133" source_obj="//@regions.0/@basic_blocks.0/@node_objs.32" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="134" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="135" source_obj="//@regions.0/@basic_blocks.0/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="136" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="137" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="138" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.35"/>
+  <edges id="139" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.35"/>
+  <edges id="140" source_obj="//@regions.0/@basic_blocks.0/@node_objs.35" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.36"/>
+  <edges id="141" source_obj="//@regions.0/@basic_blocks.0/@node_objs.33" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.36"/>
+  <edges id="142" source_obj="//@regions.0/@basic_blocks.0/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.36"/>
+  <edges id="143" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.37"/>
+  <edges id="145" source_obj="//@regions.0/@basic_blocks.0/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.38"/>
+  <edges id="146" source_obj="//@regions.0/@basic_blocks.0/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.38"/>
+  <edges id="147" source_obj="//@regions.0/@basic_blocks.0/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.39"/>
+  <edges id="148" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.39"/>
+  <edges id="149" source_obj="//@regions.0/@basic_blocks.0/@node_objs.39" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.40"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.0/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.40"/>
+  <edges id="151" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.40"/>
+  <edges id="152" source_obj="//@regions.0/@basic_blocks.0/@node_objs.40" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.41"/>
+  <edges source_obj="//@regions.0/@basic_blocks.0/@node_objs.41" sink_obj="//@ports.1"/>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="188" pipe_depth="1" RegionName="ap_fixed_base">
+    <basic_blocks id="44" name="ap_fixed_base" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="2" name="d_read" lineNumber="718" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." coreId="1116523920" contextFuncName="doubleToRawBits" bitwidth="64" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="718" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>d</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="3" name="bitcast_ln724" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="bitcast_ln724_fu_48_p1" coreId="1116523920" contextFuncName="doubleToRawBits" bitwidth="64" opcode="bitcast" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>bitselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>bitselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="4" name="empty" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="empty_fu_52_p1" coreId="165774120" contextFuncName="doubleToRawBits" bitwidth="63" opcode="trunc" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="5" name="tmp" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="tmp_fu_56_p3" coreId="1116523920" contextFuncName="doubleToRawBits" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="6" name="tmp9" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="tmp9_fu_64_p4" coreId="1116523920" contextFuncName="doubleToRawBits" bitwidth="11" opcode="partselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="7" name="conv3_i_i" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="conv3_i_i_fu_74_p1" coreId="1116523920" contextFuncName="doubleToRawBits" bitwidth="12" opcode="zext" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="8" name="empty_52" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="empty_52_fu_78_p1" coreId="1116523920" contextFuncName="doubleToRawBits" bitwidth="52" opcode="trunc" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="tmp_39_cast_cast_cast" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="tmp_39_cast_cast_cast_fu_82_p3" coreId="165774680" contextFuncName="doubleToRawBits" bitwidth="53" opcode="bitconcatenate" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="tmp_39_cast_cast_cast_cast" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="tmp_39_cast_cast_cast_cast_fu_90_p1" coreId="165776920" contextFuncName="doubleToRawBits" bitwidth="54" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="sub_i_i" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="sub_i_i_fu_94_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="doubleToRawBits" bitwidth="54" opcode="sub" m_display="0" m_delay="1.1" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="man_0" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="man_0_fu_100_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="doubleToRawBits" bitwidth="54" opcode="select" m_display="0" m_delay="0.4" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>bitselect</dataInputObjs>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>ashr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="cmp" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="cmp_fu_108_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="doubleToRawBits" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.08" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="sub" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="sub_fu_114_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="doubleToRawBits" bitwidth="12" opcode="sub" m_display="0" m_delay="0.8" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="cmp29" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="cmp29_fu_120_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="doubleToRawBits" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.8" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="sub30" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="sub30_fu_126_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="doubleToRawBits" bitwidth="12" opcode="add" m_display="0" m_delay="0.8" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="sub31" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="sub31_fu_132_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="doubleToRawBits" bitwidth="12" opcode="sub" m_display="0" m_delay="0.8" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="cond" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="cond_fu_138_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="doubleToRawBits" bitwidth="12" opcode="select" m_display="0" m_delay="0.37" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="cond_cast" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="cond_cast_fu_146_p1" coreId="1270827296" contextFuncName="doubleToRawBits" bitwidth="32" opcode="sext" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>shl</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="cmp32" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="cmp32_fu_150_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="doubleToRawBits" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.8" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="empty_53" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="empty_53_fu_156_p1" coreId="4294967295" contextFuncName="doubleToRawBits" bitwidth="32" opcode="trunc" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>shl</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="cmp40" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="cmp40_fu_160_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="doubleToRawBits" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.8" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="tmp_181" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="tmp_181_fu_166_p4" coreId="1953721967" contextFuncName="doubleToRawBits" bitwidth="7" opcode="partselect" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="icmp" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="icmp_fu_176_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="doubleToRawBits" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.77" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="shl" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="shl_fu_182_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="doubleToRawBits" bitwidth="32" opcode="shl" m_display="0" m_delay="1.38" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="storemerge" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="storemerge_fu_188_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="doubleToRawBits" bitwidth="32" opcode="select" m_display="0" m_topoIndex="25" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>shl</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="sh_prom_cast_cast_cast_cast" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="sh_prom_cast_cast_cast_cast_fu_196_p1" coreId="0" contextFuncName="doubleToRawBits" bitwidth="54" opcode="zext" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>ashr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="shr" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="shr_fu_200_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="ashr" coreId="75" contextFuncName="doubleToRawBits" bitwidth="54" opcode="ashr" m_display="0" m_delay="1.5" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="empty_54" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="empty_54_fu_206_p1" coreId="1885743136" contextFuncName="doubleToRawBits" bitwidth="32" opcode="trunc" m_display="0" m_topoIndex="28" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>ashr</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="tmp_182" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="tmp_182_fu_210_p3" coreId="4294967295" contextFuncName="doubleToRawBits" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="29" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="not_cmp" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="not_cmp_fu_218_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="doubleToRawBits" bitwidth="1" opcode="xor" m_display="0" m_delay="0.28" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="sel_tmp" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="sel_tmp_fu_224_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="doubleToRawBits" bitwidth="1" opcode="and" m_display="0" m_topoIndex="31" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>bitselect</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="sel_tmp_cast" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="sel_tmp_cast_fu_230_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="doubleToRawBits" bitwidth="32" opcode="select" m_display="0" m_topoIndex="32" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="sel_tmp2" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="sel_tmp2_fu_238_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="doubleToRawBits" bitwidth="1" opcode="and" m_display="0" m_topoIndex="33" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="sel_tmp3" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="sel_tmp3_fu_244_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="doubleToRawBits" bitwidth="32" opcode="select" m_display="0" m_delay="0.44" m_topoIndex="34" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="sel_tmp6_demorgan" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="sel_tmp6_demorgan_fu_252_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="doubleToRawBits" bitwidth="1" opcode="or" m_display="0" m_delay="0.28" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="sel_tmp8_demorgan" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="sel_tmp8_demorgan_fu_258_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="doubleToRawBits" bitwidth="1" opcode="or" m_display="0" m_topoIndex="36" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="sel_tmp9" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="sel_tmp9_fu_264_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="doubleToRawBits" bitwidth="32" opcode="select" m_display="0" m_delay="0.44" m_topoIndex="37" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="sel_tmp12" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="sel_tmp12_fu_272_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="doubleToRawBits" bitwidth="1" opcode="xor" m_display="0" m_topoIndex="38" m_clusterGroupNumber="4">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="tmp16" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="tmp16_fu_278_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="doubleToRawBits" bitwidth="1" opcode="and" m_display="0" m_topoIndex="39" m_clusterGroupNumber="4">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="sel_tmp14" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="sel_tmp14_fu_284_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="doubleToRawBits" bitwidth="1" opcode="and" m_display="0" m_delay="0.28" m_topoIndex="40" m_clusterGroupNumber="4">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="this_0" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." rtlName="ap_return" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="doubleToRawBits" bitwidth="32" opcode="select" m_display="0" m_delay="0.44" m_topoIndex="41" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>ret</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="_ln724" lineNumber="724" fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" fileDirectory="../." coreId="4228300630" contextFuncName="doubleToRawBits" opcode="ret" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h" linenumber="724" fileDirectory="C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi" functionName="doubleToRawBits"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>ap_return</dataOutputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_common.h">
+        <validLinenumbers>718</validLinenumbers>
+        <validLinenumbers>724</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <expressionNodes realName="sh_prom_cast_cast_cast_cast_fu_196">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub30_fu_126">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sel_tmp8_demorgan_fu_258">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="this_0_fu_290">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="storemerge_fu_188">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_181_fu_166">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cmp_fu_108">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="not_cmp_fu_218">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sel_tmp6_demorgan_fu_252">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp9_fu_64">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sel_tmp14_fu_284">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_fu_114">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sel_tmp3_fu_244">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln724_fu_48">
+    <nodeIds>3</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_fu_176">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_54_fu_206">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cmp32_fu_150">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_39_cast_cast_cast_cast_fu_90">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sel_tmp_fu_224">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cmp29_fu_120">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_fu_52">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sel_tmp9_fu_264">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_182_fu_210">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cond_fu_138">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="conv3_i_i_fu_74">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_52_fu_78">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_56">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="man_0_fu_100">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_fu_182">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub31_fu_132">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shr_fu_200">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sel_tmp_cast_fu_230">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp16_fu_278">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_39_cast_cast_cast_fu_82">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cmp40_fu_160">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sel_tmp2_fu_238">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_i_i_fu_94">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_53_fu_156">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sel_tmp12_fu_272">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cond_cast_fu_146">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="d_read_read_fu_42">
+    <nodeIds>2</nodeIds>
+  </ioNodes>
+  <ioPorts name="d">
+    <contents name="read">
+      <nodeIds>2</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return">
+    <contents name="ret">
+      <nodeIds>43</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="2" stage="1" latency="1"/>
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="ap_fixed_base" mII="1" mDepth="1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>44</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

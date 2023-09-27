@@ -1,0 +1,173 @@
+{
+    "1": {
+        "name": "kernel_Pipeline_no_e_first_loop_no_e_in_first_loop",
+        "file": "kernel.cpp",
+        "fileloc": "0",
+        "instructions": "2081",
+        "total_instructions": "2081",
+        "calls": "",
+        "basicblocks": "227",
+        "loads": {
+            "L": "225"
+        },
+        "stores": {
+            "L": "450"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "kernel_Pipeline_cpy_third_and_fourth_loop",
+        "file": "kernel.cpp",
+        "fileloc": "0",
+        "instructions": "420",
+        "total_instructions": "420",
+        "calls": "",
+        "basicblocks": "19",
+        "loads": {
+            "L": "57"
+        },
+        "stores": {
+            "L": "114"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "ap_fixed_base",
+        "file": "kernel.cpp",
+        "fileloc": "0",
+        "instructions": "42",
+        "total_instructions": "42",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "4": {
+        "name": "initialization",
+        "file": "kernel.cpp",
+        "fileloc": "0",
+        "instructions": "1998",
+        "total_instructions": "10552",
+        "calls": "3 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6",
+        "basicblocks": "21",
+        "loads": {
+            "L": "479"
+        },
+        "stores": {
+            "L": "480"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "kernel",
+        "file": "kernel.cpp",
+        "fileloc": "35",
+        "instructions": "3784",
+        "total_instructions": "20013",
+        "calls": "4 1 10 5 2 8 7",
+        "basicblocks": "6",
+        "loads": {
+            "L": "1316"
+        },
+        "stores": {
+            "L": "760"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "kernel_Pipeline_first_loop_in_first_loop",
+        "file": "kernel.cpp",
+        "fileloc": "0",
+        "instructions": "2095",
+        "total_instructions": "2095",
+        "calls": "",
+        "basicblocks": "227",
+        "loads": {
+            "L": "227"
+        },
+        "stores": {
+            "L": "452"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "sin<33, 6>",
+        "file": "kernel.cpp",
+        "fileloc": "0",
+        "instructions": "33",
+        "total_instructions": "532",
+        "calls": "9",
+        "basicblocks": "1"
+    },
+    "7": {
+        "name": "kernel_Pipeline_6",
+        "file": "kernel.cpp",
+        "fileloc": "0",
+        "instructions": "289",
+        "total_instructions": "289",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "kernel_Pipeline_w_second_loop",
+        "file": "kernel.cpp",
+        "fileloc": "0",
+        "instructions": "372",
+        "total_instructions": "372",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "cordic_circ_apfixed<35, 3, 0>",
+        "file": "kernel.cpp",
+        "fileloc": "0",
+        "instructions": "499",
+        "total_instructions": "499",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "10": {
+        "name": "kernel_Pipeline_no_e_cpy_third_and_fourth_loop",
+        "file": "kernel.cpp",
+        "fileloc": "0",
+        "instructions": "420",
+        "total_instructions": "420",
+        "calls": "",
+        "basicblocks": "19",
+        "loads": {
+            "L": "57"
+        },
+        "stores": {
+            "L": "114"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

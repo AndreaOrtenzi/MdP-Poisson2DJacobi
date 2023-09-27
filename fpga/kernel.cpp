@@ -35,19 +35,19 @@ inline void mycpy(T *from,T *to){
 void kernel(REAL *v_out, bool *convFPGA, unsigned int *numIter) {
 
 #pragma HLS INTERFACE m_axi depth=NX*NY port=v_out bundle=gmem0
-#pragma HLS INTERFACE m_axi depth=1 port=convFPGA bundle=gmem1
-#pragma HLS INTERFACE m_axi depth=1 port=numIter bundle=gmem1
+			#pragma HLS INTERFACE m_axi depth=1 port=convFPGA bundle=gmem1
+			#pragma HLS INTERFACE m_axi depth=1 port=numIter bundle=gmem1
 
-#pragma HLS INTERFACE s_axilite port=v_out
-#pragma HLS INTERFACE s_axilite port=convFPGA
-#pragma HLS INTERFACE s_axilite port=numIter
-#pragma HLS INTERFACE s_axilite port=return
+			#pragma HLS INTERFACE s_axilite port=v_out
+			#pragma HLS INTERFACE s_axilite port=convFPGA
+			#pragma HLS INTERFACE s_axilite port=numIter
+			#pragma HLS INTERFACE s_axilite port=return
 
 	REAL f[NX*NY],vp[NX*NY],v[NX*NY]; // *temp; // *vp=vp_arr,*v=v_arr;
 
-#pragma HLS ARRAY_PARTITION variable=f type=complete dim=1
-#pragma HLS ARRAY_PARTITION variable=vp type=complete dim=1
-#pragma HLS ARRAY_PARTITION variable=v type=complete dim=1
+		#pragma HLS ARRAY_PARTITION variable=f type=complete dim=1
+		#pragma HLS ARRAY_PARTITION variable=vp type=complete dim=1
+		#pragma HLS ARRAY_PARTITION variable=v type=complete dim=1
 
 	initialization(f,v);
 
@@ -58,8 +58,8 @@ void kernel(REAL *v_out, bool *convFPGA, unsigned int *numIter) {
 
 	unsigned int n = 0;
 	REAL e = 2. * EPS;
-	constexpr REAL quart = -0.25;
-	constexpr REAL invh2 = 1.0/(N*N); // 1/(n^2)
+	const REAL quart = -0.25;
+	const REAL invh2 = 1.0/(N*N); // 1/(n^2)
 
 	while_loop: while ((e > EPS) && (n < NMAX)) //
 	{
@@ -183,7 +183,7 @@ void kernel(REAL *v_out, bool *convFPGA, unsigned int *numIter) {
 		}
 
 
-		w *= 1.0/(NX * NY);
+		w /= (NX * NY);
 		e /= w;
 
 		//if ((n % 10) == 0)

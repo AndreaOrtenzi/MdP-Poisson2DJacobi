@@ -1,0 +1,222 @@
+
+
+================================================================
+== Vitis HLS Report for 'sin_33_6_s'
+================================================================
+* Date:           Wed Sep 27 17:42:08 2023
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        fpga
+* Solution:       solution1 (Vitis Kernel Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.886 ns|     1.08 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        8|        8|  80.000 ns|  80.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 9
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 9, States = { 1 2 3 4 5 6 7 8 9 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.90>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%x_val_read = read i33 @_ssdm_op_Read.ap_auto.i33, i33 %x_val"   --->   Operation 10 'read' 'x_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.01ns)   --->   "%sign0 = icmp_sgt  i33 %x_val_read, i33 0" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:230->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 11 'icmp' 'sign0' <Predicate = true> <Delay = 1.01> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (1.01ns)   --->   "%sub_ln237 = sub i33 0, i33 %x_val_read" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:237->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 12 'sub' 'sub_ln237' <Predicate = true> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.43ns)   --->   "%in = select i1 %sign0, i33 %x_val_read, i33 %sub_ln237" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:234->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 13 'select' 'in' <Predicate = true> <Delay = 0.43> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln64 = zext i33 %in" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:64->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 14 'zext' 'zext_ln64' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (3.45ns)   --->   "%mul_ln64 = mul i73 %zext_ln64, i73 699970842190" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:64->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 15 'mul' 'mul_ln64' <Predicate = true> <Delay = 3.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%kint = partselect i6 @_ssdm_op_PartSelect.i6.i73.i32.i32, i73 %mul_ln64, i32 67, i32 72" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:65->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 16 'partselect' 'kint' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%k = partselect i2 @_ssdm_op_PartSelect.i2.i73.i32.i32, i73 %mul_ln64, i32 67, i32 68" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:67->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 17 'partselect' 'k' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%trunc_ln68 = trunc i33 %in" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 18 'trunc' 'trunc_ln68' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 5.86>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln68 = zext i6 %kint" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 19 'zext' 'zext_ln68' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i35 @_ssdm_op_BitConcatenate.i35.i28.i7, i28 %trunc_ln68, i7 0" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 20 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (3.41ns)   --->   "%mul_ln68 = mul i35 %zext_ln68, i35 7373662959" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 21 'mul' 'mul_ln68' <Predicate = true> <Delay = 3.41> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.41> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [1/1] (1.02ns)   --->   "%add_ln68 = add i35 %shl_ln, i35 %mul_ln68" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 22 'add' 'add_ln68' <Predicate = true> <Delay = 1.02> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%r = partselect i34 @_ssdm_op_PartSelect.i34.i35.i32.i32, i35 %add_ln68, i32 1, i32 34" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 23 'partselect' 'r' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln68_1 = zext i34 %r" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 24 'zext' 'zext_ln68_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (1.02ns)   --->   "%sub_ln254 = sub i35 13493037704, i35 %zext_ln68_1" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:254->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 25 'sub' 'sub_ln254' <Predicate = true> <Delay = 1.02> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.54ns)   --->   "%icmp_ln251 = icmp_eq  i2 %k, i2 3" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:251->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 26 'icmp' 'icmp_ln251' <Predicate = true> <Delay = 0.54> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 27 [1/1] (0.54ns)   --->   "%icmp_ln251_1 = icmp_eq  i2 %k, i2 1" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:251->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 27 'icmp' 'icmp_ln251_1' <Predicate = true> <Delay = 0.54> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (0.00ns) (grouped into LUT with out node z)   --->   "%or_ln251 = or i1 %icmp_ln251, i1 %icmp_ln251_1" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:251->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 28 'or' 'or_ln251' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns) (grouped into LUT with out node z)   --->   "%tmp_1 = partselect i34 @_ssdm_op_PartSelect.i34.i35.i32.i32, i35 %sub_ln254, i32 1, i32 34" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:251->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 29 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns) (grouped into LUT with out node z)   --->   "%tmp_2 = partselect i33 @_ssdm_op_PartSelect.i33.i35.i32.i32, i35 %add_ln68, i32 2, i32 34" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:251->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 30 'partselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node z)   --->   "%zext_ln251 = zext i33 %tmp_2" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:251->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 31 'zext' 'zext_ln251' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.41ns) (out node of the LUT)   --->   "%z = select i1 %or_ln251, i34 %tmp_1, i34 %zext_ln251" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:251->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 32 'select' 'z' <Predicate = true> <Delay = 0.41> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.54ns)   --->   "%icmp_ln274 = icmp_eq  i2 %k, i2 0" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:274->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 33 'icmp' 'icmp_ln274' <Predicate = true> <Delay = 0.54> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 8.88>
+ST_3 : Operation 34 [7/7] (8.88ns)   --->   "%y = call i34 @cordic_circ_apfixed<35, 3, 0>, i34 %z" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 34 'call' 'y' <Predicate = true> <Delay = 8.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 8.88>
+ST_4 : Operation 35 [6/7] (8.88ns)   --->   "%y = call i34 @cordic_circ_apfixed<35, 3, 0>, i34 %z" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 35 'call' 'y' <Predicate = true> <Delay = 8.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 8.88>
+ST_5 : Operation 36 [5/7] (8.88ns)   --->   "%y = call i34 @cordic_circ_apfixed<35, 3, 0>, i34 %z" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 36 'call' 'y' <Predicate = true> <Delay = 8.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 8.88>
+ST_6 : Operation 37 [4/7] (8.88ns)   --->   "%y = call i34 @cordic_circ_apfixed<35, 3, 0>, i34 %z" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 37 'call' 'y' <Predicate = true> <Delay = 8.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 8.88>
+ST_7 : Operation 38 [3/7] (8.88ns)   --->   "%y = call i34 @cordic_circ_apfixed<35, 3, 0>, i34 %z" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 38 'call' 'y' <Predicate = true> <Delay = 8.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 8.88>
+ST_8 : Operation 39 [2/7] (8.88ns)   --->   "%y = call i34 @cordic_circ_apfixed<35, 3, 0>, i34 %z" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 39 'call' 'y' <Predicate = true> <Delay = 8.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 8.30>
+ST_9 : Operation 40 [1/7] (5.58ns)   --->   "%y = call i34 @cordic_circ_apfixed<35, 3, 0>, i34 %z" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 40 'call' 'y' <Predicate = true> <Delay = 5.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 41 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i29 @_ssdm_op_PartSelect.i29.i34.i32.i32, i34 %y, i32 5, i32 33" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:275->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 41 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 42 [1/1] (1.02ns)   --->   "%sub_ln274 = sub i34 0, i34 %y" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:274->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 42 'sub' 'sub_ln274' <Predicate = (!icmp_ln251_1 & !icmp_ln274)> <Delay = 1.02> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node select_ln274_1)   --->   "%trunc_ln1 = partselect i29 @_ssdm_op_PartSelect.i29.i34.i32.i32, i34 %sub_ln274, i32 5, i32 33" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:274->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 43 'partselect' 'trunc_ln1' <Predicate = (!icmp_ln251_1 & !icmp_ln274)> <Delay = 0.00>
+ST_9 : Operation 44 [1/1] (0.00ns) (grouped into LUT with out node select_ln274_1)   --->   "%select_ln274 = select i1 %icmp_ln251_1, i29 %trunc_ln, i29 %trunc_ln1" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:274->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 44 'select' 'select_ln274' <Predicate = (!icmp_ln274)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 45 [1/1] (0.35ns) (out node of the LUT)   --->   "%select_ln274_1 = select i1 %icmp_ln274, i29 %trunc_ln, i29 %select_ln274" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:274->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 45 'select' 'select_ln274_1' <Predicate = true> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 46 [1/1] (0.98ns)   --->   "%sub_ln292 = sub i29 0, i29 %select_ln274_1" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:292->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 46 'sub' 'sub_ln292' <Predicate = (!sign0)> <Delay = 0.98> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 47 [1/1] (0.35ns)   --->   "%select_ln291 = select i1 %sign0, i29 %select_ln274_1, i29 %sub_ln292" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:291->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937]   --->   Operation 47 'select' 'select_ln291' <Predicate = true> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 48 [1/1] (0.00ns)   --->   "%ret_ln1939 = ret i29 %select_ln291" [C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1939]   --->   Operation 48 'ret' 'ret_ln1939' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 1.080ns.
+
+ <State 1>: 4.902ns
+The critical path consists of the following:
+	wire read operation ('x_val_read') on port 'x_val' [2]  (0.000 ns)
+	'icmp' operation ('sign0', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:230->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) [3]  (1.018 ns)
+	'select' operation ('in', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:234->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) [5]  (0.432 ns)
+	'mul' operation ('mul_ln64', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:64->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) [7]  (3.452 ns)
+
+ <State 2>: 5.870ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln68', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) [13]  (3.410 ns)
+	'add' operation ('add_ln68', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) [14]  (1.023 ns)
+	'sub' operation ('sub_ln254', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:254->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) [17]  (1.023 ns)
+	'select' operation ('z', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:251->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) [24]  (0.414 ns)
+
+ <State 3>: 8.886ns
+The critical path consists of the following:
+	'call' operation ('y', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) to 'cordic_circ_apfixed<35, 3, 0>' [25]  (8.886 ns)
+
+ <State 4>: 8.886ns
+The critical path consists of the following:
+	'call' operation ('y', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) to 'cordic_circ_apfixed<35, 3, 0>' [25]  (8.886 ns)
+
+ <State 5>: 8.886ns
+The critical path consists of the following:
+	'call' operation ('y', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) to 'cordic_circ_apfixed<35, 3, 0>' [25]  (8.886 ns)
+
+ <State 6>: 8.886ns
+The critical path consists of the following:
+	'call' operation ('y', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) to 'cordic_circ_apfixed<35, 3, 0>' [25]  (8.886 ns)
+
+ <State 7>: 8.886ns
+The critical path consists of the following:
+	'call' operation ('y', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) to 'cordic_circ_apfixed<35, 3, 0>' [25]  (8.886 ns)
+
+ <State 8>: 8.886ns
+The critical path consists of the following:
+	'call' operation ('y', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) to 'cordic_circ_apfixed<35, 3, 0>' [25]  (8.886 ns)
+
+ <State 9>: 8.300ns
+The critical path consists of the following:
+	'call' operation ('y', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) to 'cordic_circ_apfixed<35, 3, 0>' [25]  (5.582 ns)
+	'sub' operation ('sub_ln274', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:274->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) [27]  (1.020 ns)
+	'select' operation ('select_ln274', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:274->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) [29]  (0.000 ns)
+	'select' operation ('select_ln274_1', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:274->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) [31]  (0.356 ns)
+	'sub' operation ('sub_ln292', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:292->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) [32]  (0.985 ns)
+	'select' operation ('select_ln291', C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:291->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1937) [33]  (0.356 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
