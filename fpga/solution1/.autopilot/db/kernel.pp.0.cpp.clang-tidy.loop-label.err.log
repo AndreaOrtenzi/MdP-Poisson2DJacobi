@@ -1,4 +1,0 @@
-1 warning and 26 errors generated.
-Error while processing C:\Users\Leonardo\Documents\GitHub\MdP-Poisson2DJacobi\fpga\solution1\.autopilot\db\kernel.pp.0.cpp.
-clang-tidy applied 130 of 130 suggested fixes.
-Suppressed 1 warnings (1 with check filters).
