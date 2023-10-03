@@ -1,6 +1,6 @@
 #include <math.h>
 
-void kernel_double(double *v, unsigned int nx, unsigned int ny, double EPS, unsigned int NMAX, bool *convFPGA, unsigned int *numIter){
+void kernel_double(double *v, unsigned int nx, unsigned int ny, const double eps,const unsigned int nmax, bool *convFPGA, unsigned int *numIter){
 
 
 	double f[nx*ny],vp[nx*ny];
@@ -23,12 +23,12 @@ void kernel_double(double *v, unsigned int nx, unsigned int ny, double EPS, unsi
 
 
 	unsigned int n = 0;
-	double e = 2. * EPS;
+	double e = 2. * eps;
 
 	constexpr double quart = -0.25;
 	const double invh2 = 1.0/(nx*ny); // 1/(n^2)
 
-	while ((e > EPS) && (n < NMAX))
+	while ((e > eps) && (n < nmax))
 	{
 		e = 0.0;
 
@@ -86,6 +86,6 @@ void kernel_double(double *v, unsigned int nx, unsigned int ny, double EPS, unsi
 	}
 
 	*numIter = n;
-	*convFPGA = (e < EPS ? true : false);
+	*convFPGA = (e < eps ? true : false);
 
 }

@@ -1,5 +1,5 @@
 #ifndef N
-#define N 128
+#define N 16
 #endif
 
 #ifndef NX
@@ -13,23 +13,22 @@
 #define KERNEL_INCL
 
 #define NMAX 200000
-#define EPS 1e-5
+#define EPS 1.e-5
 
 #ifndef FIXED
-#define FIXED false
+#define FIXED true
 #endif
 
 #if FIXED
 #include "ap_fixed.h"
-#define REAL ap_fixed<32, 10> // < , I> I: integer bits
+#define REAL ap_fixed<32, 5> // < , I> I: integer bits
 #include "hls_math.h"
 #else
 #include "math.h"
 #ifndef REAL
 #define REAL float // change also BYTES_REAL
-#endif
-#endif
-#endif
+#endif // REAL
+#endif // FIXED
 
 #include <cstring>
 

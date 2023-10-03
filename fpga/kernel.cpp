@@ -58,8 +58,13 @@ void kernel(REAL *v_out, bool *convFPGA, unsigned int *numIter) {
 
 	unsigned int n = 0;
 	REAL e = 2. * EPS;
+#if FIXED
+	const REAL quart = -0.25;
+	const REAL invh2 = 1.0/(N*N); // 1/(n^2)
+#else
 	constexpr REAL quart = -0.25;
 	constexpr REAL invh2 = 1.0/(N*N); // 1/(n^2)
+#endif
 
 	while_loop: while ((e > EPS) && (n < NMAX)) //
 	{
@@ -183,7 +188,7 @@ void kernel(REAL *v_out, bool *convFPGA, unsigned int *numIter) {
 		}
 
 
-		w *= 1.0/(NX * NY);
+		w /= (NX * NY);
 		e /= w;
 
 		//if ((n % 10) == 0)
